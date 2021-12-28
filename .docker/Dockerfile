@@ -24,5 +24,4 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 COPY .docker/vhost.conf /etc/apache2/sites-enabled/000-default.conf
 
 RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 777 storage bootstrap \
     && a2enmod rewrite
